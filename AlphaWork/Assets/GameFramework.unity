@@ -388,7 +388,7 @@ Prefab:
     - target: {fileID: 114371898010766806, guid: 19f51da3bcb3e9842961618c97c12869,
         type: 2}
       propertyPath: m_JsonHelperTypeName
-      value: 
+      value: AlphaWork.LitJsonHelper
       objectReference: {fileID: 0}
     - target: {fileID: 114780895829404068, guid: 19f51da3bcb3e9842961618c97c12869,
         type: 2}
@@ -399,6 +399,11 @@ Prefab:
         type: 2}
       propertyPath: m_UIGroupHelperTypeName
       value: AlphaWork.UGuiGroupHelper
+      objectReference: {fileID: 0}
+    - target: {fileID: 114371898010766806, guid: 19f51da3bcb3e9842961618c97c12869,
+        type: 2}
+      propertyPath: m_EditorResourceMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114480108300961450, guid: 19f51da3bcb3e9842961618c97c12869, type: 2}
