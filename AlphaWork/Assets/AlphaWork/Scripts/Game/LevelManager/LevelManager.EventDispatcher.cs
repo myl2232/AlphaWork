@@ -59,19 +59,19 @@ namespace AlphaWork
 
         public void OnUpClick(object sender, GameEventArgs e)
         {
-            CrossPlatformInputManager.SetAxis("Vertical", 0.1f);
+            CrossPlatformInputManager.SetAxis("Vertical", 1f);
         }
         public void OnDownClick(object sender, GameEventArgs e)
         {
-            CrossPlatformInputManager.SetAxis("Vertical", -0.1f);
+            CrossPlatformInputManager.SetAxis("Vertical", -1f);
         }
         public void OnLeftClick(object sender, GameEventArgs e)
         {
-            CrossPlatformInputManager.SetAxis("Horizontal", -0.1f);
+            CrossPlatformInputManager.SetAxis("Horizontal", -1f);
         }
         public void OnRightClick(object sender, GameEventArgs e)
         {
-            CrossPlatformInputManager.SetAxis("Horizontal", 0.1f);
+            CrossPlatformInputManager.SetAxis("Horizontal", 1f);
         }
     }
 }
