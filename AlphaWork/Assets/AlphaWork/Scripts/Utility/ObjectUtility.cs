@@ -18,6 +18,7 @@ namespace AlphaWork
         {
 
         }
+
         public static UnityEngine.Object GetAssistObject()
         {
             string str = "EthanAgent";

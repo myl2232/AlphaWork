@@ -18,8 +18,13 @@
         Menu = 2,
 
         /// <summary>
+        /// AR主场景。
+        /// </summary>
+        Default = 3,
+
+        /// <summary>
         /// 主场景。
         /// </summary>
-        Main = 3,
+        Main = 4,
     }
 }

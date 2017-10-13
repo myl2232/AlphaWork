@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23217453054866738}
   - component: {fileID: 114661241982072624}
   - component: {fileID: 195646121852323390}
+  - component: {fileID: 114500556943705708}
   m_Layer: 0
   m_Name: BallPrefab
   m_TagString: Untagged
@@ -83,6 +84,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1309908691235446}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114500556943705708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309908691235446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d24244ceb54d42ca92481ba81c45056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114661241982072624
 MonoBehaviour:
   m_ObjectHideFlags: 1

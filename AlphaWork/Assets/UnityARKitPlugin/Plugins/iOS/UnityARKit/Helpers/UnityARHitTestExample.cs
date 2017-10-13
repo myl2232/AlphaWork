@@ -21,10 +21,12 @@ namespace UnityEngine.XR.iOS
             }
             return false;
         }
-		
-		// Update is called once per frame
-		void Update () {
-			if (Input.touchCount > 0 && m_HitTransform != null)
+
+        // Update is called once per frame
+        void Update()
+        {
+#if !UNITY_EDITOR
+            if (Input.touchCount > 0 && m_HitTransform != null)
 			{
 				var touch = Input.GetTouch(0);
 				if (touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Moved)
@@ -53,9 +55,17 @@ namespace UnityEngine.XR.iOS
                     }
 				}
 			}
-		}
+ #endif
+            
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    var screenPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                    m_HitTransform.position = Input.mousePosition;
+                }
+            }
 
-	
-	}
+        }
+    }
 }
 

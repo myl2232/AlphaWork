@@ -117,31 +117,31 @@ namespace AlphaWork
                 return;
             }
             //removed by myl
-//             string responseJson = Utility.Converter.GetString(ne.GetWebResponseBytes());
-//             VersionInfo versionInfo = Utility.Json.ToObject<VersionInfo>(responseJson);
-//             if (versionInfo == null)
-//             {
-//                 Log.Error("Parse VersionInfo failure.");
-//                 return;
-//             }
-// 
-//             Log.Info("Latest game version is '{0}', local game version is '{1}'.", versionInfo.LatestGameVersion, GameEntry.Base.GameVersion);
-// 
-//             if (versionInfo.ForceGameUpdate)
-//             {
-//                 GameEntry.UI.OpenDialog(new DialogParams
-//                 {
-//                     Mode = 2,
-//                     Title = GameEntry.Localization.GetString("ForceUpdate.Title"),
-//                     Message = GameEntry.Localization.GetString("ForceUpdate.Message"),
-//                     ConfirmText = GameEntry.Localization.GetString("ForceUpdate.UpdateButton"),
-//                     OnClickConfirm = delegate (object userData) { Application.OpenURL(versionInfo.GameUpdateUrl); },
-//                     CancelText = GameEntry.Localization.GetString("ForceUpdate.QuitButton"),
-//                     OnClickCancel = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
-//                 });
-// 
-//                 return;
-//             }
+            //string responseJson = Utility.Converter.GetString(ne.GetWebResponseBytes());
+            //VersionInfo versionInfo = Utility.Json.ToObject<VersionInfo>(responseJson);
+            //if (versionInfo == null)
+            //{
+            //    Log.Error("Parse VersionInfo failure.");
+            //    return;
+            //}
+
+            //Log.Info("Latest game version is '{0}', local game version is '{1}'.", versionInfo.LatestGameVersion, GameEntry.Base.GameVersion);
+
+            //if (versionInfo.ForceGameUpdate)
+            //{
+            //    GameEntry.UI.OpenDialog(new DialogParams
+            //    {
+            //        Mode = 2,
+            //        Title = GameEntry.Localization.GetString("ForceUpdate.Title"),
+            //        Message = GameEntry.Localization.GetString("ForceUpdate.Message"),
+            //        ConfirmText = GameEntry.Localization.GetString("ForceUpdate.UpdateButton"),
+            //        OnClickConfirm = delegate (object userData) { Application.OpenURL(versionInfo.GameUpdateUrl); },
+            //        CancelText = GameEntry.Localization.GetString("ForceUpdate.QuitButton"),
+            //        OnClickCancel = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
+            //    });
+
+            //    return;
+            //}
 
             GameEntry.Resource.InitResources();
         }

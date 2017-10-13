@@ -15,5 +15,6 @@
         DownClickEvent,
         LeftClickEvent,
         RightClickEvent,
+        RefreshMainPosEvent,
     }
 }

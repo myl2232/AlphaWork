@@ -11,7 +11,9 @@ namespace AlphaWork
         /*public SurviveGame gm;*/
         private float markTime;
         private float lastMarkTime;
-
+        public static bool ArMode;
+        public GameBuilder builder;
+        
         private void Start()
         {
 //             GameObject frameworkPrefab = (GameObject)Resources.Load("PrefabDefined/GameFramework");
@@ -19,6 +21,8 @@ namespace AlphaWork
 
             InitBuiltinComponents();
             InitCustomComponents();
+
+            //builder = ObjectUtility.GetFellow("GameBuilder") as GameBuilder;
             /*Agent = GetAssistObject();*/
             //OnClick = OnClickImpl;
             //if(gm == null)
@@ -37,7 +41,7 @@ namespace AlphaWork
             markTime = Time.time;
             //gm.Update(Time.timeSinceLevelLoad, Time.fixedDeltaTime/*markTime - lastMarkTime*/);
             lastMarkTime = markTime;
-            
+            ArMode = builder.ARMode;
         }
 
     }

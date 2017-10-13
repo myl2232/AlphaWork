@@ -253,14 +253,59 @@ public class RecastNavigationEditorWindow : EditorWindow
 	{
 		m_params.Reset();
 	}
+	
+// 	GwNavTag BuildNavTag(GameObject gameObject)
+// 	{
+// 		GwNavigationGenerationInfo genInfo = gameObject.GetComponent<GwNavigationGenerationInfo>();
+// 		//int unityNavMeshLayerIdx = GameObjectUtility.GetNavMeshLayer(gameObject);
+// 		int navMeshLayerIdx = 0;
+// 		if (genInfo != null)
+// 			navMeshLayerIdx = genInfo.navMeshLayer;
+// 		
+// 		GwNavTag navTag = new GwNavTag();
+// 		
+// 		navTag.m_navTagType           = (uint)GwNavTagType.Layer;
+// 		navTag.m_layer                = (uint)navMeshLayerIdx;
+// 		navTag.m_staticCostMultiplier = (uint)m_world.GetLayerCost(navMeshLayerIdx);
+// 		navTag.m_smartObjectID        = uint.MaxValue;
+// 		navTag.m_isExclusive          = navMeshLayerIdx == 1 ? true : false; // navMeshLayerIdx 1 = "not walkable"
+// 		Color32 color = new Color32();
+// 		color = m_world.GetLayerColor(navMeshLayerIdx);
+// 		navTag.m_color.Set(color);
+// 		return navTag;
+// 	}
 
-    int BuildNavTag(GameObject gameObject)
-    {
-        int unityNavMeshLayerIdx = GameObjectUtility.GetNavMeshLayer(gameObject);
-        return unityNavMeshLayerIdx;
-        //return unityNavMeshLayerIdx == 1 ? true : false; // navMeshLayerIdx 1 = "not walkable"
-    }
+	bool CompareApproximately(float x, float y, float epsilon = 0.000001F)
+	{
+		float dist = x - y;
+		dist = Math.Abs(dist);
+		return dist < epsilon;
+	}
 
+	bool HasNegativeScaleTransform( Transform t )
+	{
+		if ( CompareApproximately(t.localScale.x, t.localScale.y, 0.0001F) && CompareApproximately(t.localScale.y, t.localScale.z, 0.0001F) )
+		{
+			if ( CompareApproximately( t.localScale.x, 1.0F, 0.0001F ) )
+				return false;
+			else
+			{
+				if (t.localScale.x > 0.0F)
+					return false;
+				else
+					return true;
+			}
+		}
+		else
+		{
+			if ( (t.localScale.x <= 0.0F)
+			    || (t.localScale.y <= 0.0F)
+			    || (t.localScale.z <= 0.0F) )
+				return true;
+		}
+		return false;
+	}
+	
 	void ConsumeMeshFilter(MeshFilter meshFilter, GameObject gameObject)
 	{
 		if (meshFilter.sharedMesh)
@@ -268,7 +313,7 @@ public class RecastNavigationEditorWindow : EditorWindow
 			Vector3[] vertices = meshFilter.sharedMesh.vertices;
 			int[] triangleVertexIndices = meshFilter.sharedMesh.triangles;
 			Transform t = gameObject.transform;
-			int layer = BuildNavTag(gameObject);
+			//GwNavTag navTag = BuildNavTag(gameObject);
 			
 			for(int triangleFirstVertexIdx = 0; triangleFirstVertexIdx < triangleVertexIndices.Length; triangleFirstVertexIdx+=3)
 			{
@@ -278,7 +323,12 @@ public class RecastNavigationEditorWindow : EditorWindow
 				Vector3 posA = t.TransformPoint(posALocal);
 				Vector3 posB = t.TransformPoint(posBLocal);
 				Vector3 posC = t.TransformPoint(posCLocal);
-                RecastNavigationDllImports.PushTriangleWithNavTag(posA, posB, posC, layer);
+
+				if (HasNegativeScaleTransform(t))
+					RecastNavigationDllImports.PushTriangleWithNavTag(posC, posB, posA);
+				else
+					RecastNavigationDllImports.PushTriangleWithNavTag(posA, posB, posC);
+
 				totalTriangleCount++;
 			}
 		}
@@ -293,7 +343,7 @@ public class RecastNavigationEditorWindow : EditorWindow
 	void ConsumeTerrainTriangles(TerrainData terrain, GameObject gameObject)
 	{	
 		Vector3 terrainPos = gameObject.transform.position;
-		int layer = BuildNavTag(gameObject);
+		//GwNavTag navTag = BuildNavTag(gameObject);
 		
 		int vertexCount_x = terrain.heightmapWidth;
 		int vertexCount_z = terrain.heightmapHeight;
@@ -312,8 +362,8 @@ public class RecastNavigationEditorWindow : EditorWindow
 
 //                 RecastNavigationDllImports.PushTriangleWithNavTag(A, B, C);
 //                 RecastNavigationDllImports.PushTriangleWithNavTag(A, C, D);
-                RecastNavigationDllImports.PushTriangleWithNavTag(C, B, A, layer);
-                RecastNavigationDllImports.PushTriangleWithNavTag(D, C, A, layer);
+                RecastNavigationDllImports.PushTriangleWithNavTag(C, B, A);
+                RecastNavigationDllImports.PushTriangleWithNavTag(D, C, A);
 				totalTriangleCount+=2;
 			}
 		}
@@ -343,17 +393,17 @@ public class RecastNavigationEditorWindow : EditorWindow
 
             // Push trunk as a vertical square based tube
 			// Front
-            RecastNavigationDllImports.PushTriangleWithNavTag(baseA, baseB, topB, 1);
-            RecastNavigationDllImports.PushTriangleWithNavTag(baseA, topB, topA, 1);
+            RecastNavigationDllImports.PushTriangleWithNavTag(baseA, baseB, topB);
+            RecastNavigationDllImports.PushTriangleWithNavTag(baseA, topB, topA);
 			// Right
-            RecastNavigationDllImports.PushTriangleWithNavTag(baseB, baseC, topC, 1);
-            RecastNavigationDllImports.PushTriangleWithNavTag(baseB, topC, topB, 1);
+            RecastNavigationDllImports.PushTriangleWithNavTag(baseB, baseC, topC);
+            RecastNavigationDllImports.PushTriangleWithNavTag(baseB, topC, topB);
 			// Back
-            RecastNavigationDllImports.PushTriangleWithNavTag(baseC, baseD, topD, 1);
-            RecastNavigationDllImports.PushTriangleWithNavTag(baseC, topD, topC, 1);
+            RecastNavigationDllImports.PushTriangleWithNavTag(baseC, baseD, topD);
+            RecastNavigationDllImports.PushTriangleWithNavTag(baseC, topD, topC);
 			// Left
-            RecastNavigationDllImports.PushTriangleWithNavTag(baseD, baseA, topA, 1);
-            RecastNavigationDllImports.PushTriangleWithNavTag(baseD, topA, topD, 1);
+            RecastNavigationDllImports.PushTriangleWithNavTag(baseD, baseA, topA);
+            RecastNavigationDllImports.PushTriangleWithNavTag(baseD, topA, topD);
 			totalTriangleCount +=8;
 		}
 	}
@@ -414,9 +464,6 @@ public class RecastNavigationEditorWindow : EditorWindow
 
             string binaryPath = resourceFolder + sceneName + ".bin";
             System.IO.File.WriteAllBytes(binaryPath, navMeshAsset.navMeshData);
-
-			string stringPath = resourceFolder + sceneName + ".nav";
-			RecastNavigationDllImports.SaveDataToFile(stringPath);
 		}
 	}
 	

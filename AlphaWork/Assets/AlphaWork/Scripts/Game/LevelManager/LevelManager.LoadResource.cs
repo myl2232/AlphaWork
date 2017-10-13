@@ -16,25 +16,30 @@ namespace AlphaWork
         {
             if (!GameBase.HasMainActor())
             {
+				Vector3 mainPos = Camera.main.transform.position + Camera.main.transform.forward * 100;
+				//new Vector3(33, 100, 48);
+				RaycastHit hit;
+                Physics.Raycast(mainPos, Vector3.down, out hit, 1000);
+
                 GameEntry.Entity.ShowEthan(new EthanData(GameEntry.Entity.GenerateSerialId(), 80000, CampType.Player)
                 {
-                    Position = new Vector3(26, 2, 20),
+                    Position = mainPos,//new Vector3(26, 2, 20),
                 });
 
-                for (int i = 0; i < 5; ++i)
-                {
-                    RaycastHit hitInfo;
-                    Vector3 startPt = new Vector3(UnityEngine.Random.Range(10, 50), 10f,
-                        UnityEngine.Random.Range(10, 50));
+                //for (int i = 0; i < 5; ++i)
+                //{
+                //    RaycastHit hitInfo;
+                //    Vector3 startPt = new Vector3(UnityEngine.Random.Range(mainPos.x + 10, mainPos.x + 50), 100f,
+                //        UnityEngine.Random.Range(mainPos.z + 10, mainPos.x + 50));
 
-                    Physics.Raycast(startPt,
-                        Vector3.down, out hitInfo, 100);
+                //    Physics.Raycast(startPt,
+                //        Vector3.down, out hitInfo, 100);
 
-                    GameEntry.Entity.ShowNPC(new NPCData(GameEntry.Entity.GenerateSerialId(), 10000, CampType.Enemy)
-                    {
-                        Position = hitInfo.point,
-                    });
-                }
+                //    GameEntry.Entity.ShowNPC(new NPCData(GameEntry.Entity.GenerateSerialId(), 10000, CampType.Enemy)
+                //    {
+                //        Position = hitInfo.point,
+                //    });
+                //}
             }
         }
 

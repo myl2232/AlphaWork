@@ -23,7 +23,8 @@ namespace AlphaWork
         {
             Config = UnityGameFramework.Runtime.GameEntry.GetComponent<ConfigComponent>();
             //HPBar = UnityGameFramework.Runtime.GameEntry.GetComponent<HPBarComponent>();            
+           
         }
-
+      
     }
 }

@@ -5,3 +5,4 @@
 	1	预加载场景	PreMain	1
 	2	登录场景	Login	2
 	3	主场景	Default	2
+	4	正常主场景	Main	2

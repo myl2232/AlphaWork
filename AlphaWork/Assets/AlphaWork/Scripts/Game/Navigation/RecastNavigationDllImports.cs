@@ -30,30 +30,50 @@ public class RecastNavigationDllImports
     * GetGwNavLogMessageCount and for each message, call GetGwNavLog. When done, call FlushGwNavLog.
     */
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern void CreateLog(int bufferMaxSize, int maxMessageCount);
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern int GetGwNavLogMessageCount();
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern IntPtr GetGwNavLog(int messageIndex, out int messageSize);
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern void FlushGwNavLog();
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern void DestroyLog();
 
 
     /******** Base system *************************************************************/
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern bool NavGeneration_Init();
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern void NavGeneration_DeInit();
 
+    /******** Path find *************************************************************/
+
+    public static bool PathFind(Vector3 start, Vector3 end, 
+        ref int pathNum, ref Vector3[] smoothPath)
+    {
+        pathNum = CalcSmoothPath(start, end);
+        if (pathNum == 0)
+        {
+            return false;
+        }
+
+        GetSmoothPath(smoothPath);
+        return true;
+    }
+
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
+    public static extern int CalcSmoothPath(Vector3 start, Vector3 end);
+
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
+    public static extern int GetSmoothPath(Vector3[] smoothPath);
 
     /******** Generate ************************************************************
      * 1. InitGenerator.
@@ -63,61 +83,57 @@ public class RecastNavigationDllImports
      * 5. Render generated data
      */
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern void InitGenerator();
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern bool Generate(NavMeshBuildSettings config, string generationName);
 
 
     /******** Consume inputs *************************************************************/
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern void PushTriangle(Vector3 A, Vector3 B, Vector3 C);
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern void PushSeedPoint(Vector3 pos);
 
-    [DllImport("recast-unity")]
-    public static extern void PushTriangleWithNavTag(Vector3 A, Vector3 B, Vector3 C, int layer);
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
+    public static extern void PushTriangleWithNavTag(Vector3 A, Vector3 B, Vector3 C);
 
 
     /******** Get generated data *************************************************************/
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern int GetGeneratedDataSizeInBytes();
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern bool GetGeneratedData(ref IntPtr buffer, ref int bufferSize);
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern int GetNavMeshTriangleCount();
 
 
     /******** Render generated data *************************************************************/
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern bool LoadNavDataImmediate(IntPtr memory);
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern bool RemoveAllNavData();
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern bool BuildDatabaseGeometry();
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern uint GetDatabaseTriangleCount();
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern bool GetDatabaseTriangle(uint triangleIndex, out RecastVisualTriangle triangle);
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern int GetPolygonVertexCount();
 
-    [DllImport("recast-unity")]
+    [DllImport("recast-unity", CallingConvention = CallingConvention.Cdecl)]
     public static extern bool GetPolygonVertex(uint vertexIndex, out Vector3 vertex, out Color32 color);
-
-    /******** Save Data To *.nav *************************************************************/
-    [DllImport("recast-unity")]
-    public static extern bool SaveDataToFile(string szPathName);
 }

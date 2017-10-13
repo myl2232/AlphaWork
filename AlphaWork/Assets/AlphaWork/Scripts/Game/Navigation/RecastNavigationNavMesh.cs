@@ -53,15 +53,13 @@ public class RecastNavigationNavMeshRepresentation
 	
 	public void LoadShadersAndMaterials()
 	{
-        //return;
-        
- 		m_navMeshSolidShader = (Shader)Resources.Load("NavShaders/NavMeshSolid");
+ 		m_navMeshSolidShader = (Shader)Resources.Load("NavMeshSolid");
  		m_navMeshSolidMaterial = new Material(m_navMeshSolidShader);
 
         //m_navMeshSolidMaterial = new UnityEngine.Material(Shader.Find("Diffuse"));
         //m_navMeshSolidMaterial.hideFlags |= HideFlags.DontSave;
 		
-		m_navMeshWireframeShader = (Shader)Resources.Load("NavShaders/NavMeshWireframe");
+		m_navMeshWireframeShader = (Shader)Resources.Load("NavMeshWireframe");
 		m_navMeshWireframeMaterial = new Material(m_navMeshWireframeShader);
 	}
 	
@@ -74,9 +72,7 @@ public class RecastNavigationNavMeshRepresentation
 		foreach(Mesh mesh in m_navDataVisualDebugMeshes)
 		{	
 			if (mesh != null)
-			{
 				Graphics.DrawMeshNow(mesh, Matrix4x4.identity);
-			}
 		}
 		
 // 		GL.wireframe = true;

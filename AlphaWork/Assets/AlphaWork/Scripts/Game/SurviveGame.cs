@@ -1,5 +1,6 @@
 ﻿using GameFramework;
 using GameFramework.DataTable;
+using GameFramework.Event;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
@@ -7,7 +8,7 @@ using UnityEngine.AI;
 using System;
 using System.Collections.Generic;
 using UnityGameFramework.Runtime;
-//using AlphaLib;
+using UnityEngine.XR.iOS;
 
 namespace AlphaWork
 {
@@ -15,6 +16,7 @@ namespace AlphaWork
     {
         protected LevelManager m_levelManager = new LevelManager();
         private float m_ElapseSeconds = 0f;
+        public Transform m_MainEthanTransform;
         //protected Alpha Alib = new Alpha();
 
         public override GameMode GameMode
@@ -37,11 +39,19 @@ namespace AlphaWork
         {
              base.Initialize();
 
+            GameEntry.Event.Subscribe(EventId.RefreshMainPosEvent, OnRefreshMainPos);
             //Alib.Meto();
             GameEntry.Event.Fire(this, new GameStartEventArgs());
             GameEntry.UI.OpenUIForm(UIFormId.MainForm);
+
+            m_levelManager.m_parent = this;
         }
 
+        public void OnRefreshMainPos(object sender, GameEventArgs e)
+        {
+            RefreshMainPosArgs arg = e as RefreshMainPosArgs;
+            MainEthan.transform.position = arg.TransCache.position + new Vector3(0,2,0);
+        }
         //public void LoadGameObjects()
         //{
         //    GameEntry.Entity.ShowEthan(new EthanData(GameEntry.Entity.GenerateSerialId(), 80000, CampType.Player)
@@ -69,20 +79,21 @@ namespace AlphaWork
         {
             base.Update(elapseSeconds, realElapseSeconds);
 
-            if(MainEthan)
+            if(MainEthan && !GameEntry.ArMode)
             {
-                Vector3 offset = new Vector3(5, 5, 5);
+                Vector3 offset = new Vector3(20, 20, 20);
                 offset += MainEthan.transform.position;
                 Camera.main.transform.position = offset;
 
                 //RaycastHit hitInfo;
                 //Physics.Raycast(Camera.main.transform.position, MainEthan.transform.position - Camera.main.transform.position - offset, out hitInfo, 100);
-                
+
                 Camera.main.transform.LookAt(MainEthan.transform.position + new Vector3(0,1,0)/*hitInfo.point*/);
-                
+
                 //string str = string.Format("{0:f2},{1:f2},{2:f2}", hitInfo.point.x, hitInfo.point.y, hitInfo.point.z);
                 //DebugUtility.DebugText(str);
                 //GameFramework.Log.Debug(str);
+
             }
 
             m_ElapseSeconds += realElapseSeconds;
