@@ -478,7 +478,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 193354, guid: 01ceb7b7ea365784d8c11420093e124a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22434022, guid: 01ceb7b7ea365784d8c11420093e124a, type: 2}
       propertyPath: m_AnchoredPosition.x
