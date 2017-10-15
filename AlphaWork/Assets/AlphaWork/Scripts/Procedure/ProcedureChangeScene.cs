@@ -104,10 +104,10 @@ namespace AlphaWork
 
             Log.Info("Load scene '{0}' OK.", ne.SceneAssetName);
 
-            if (m_BackgroundMusicId > 0)
-            {
-                GameEntry.Sound.PlayMusic(m_BackgroundMusicId);
-            }
+//             if (m_BackgroundMusicId > 0)
+//             {
+//                 GameEntry.Sound.PlayMusic(m_BackgroundMusicId);
+//             }
 
             m_IsChangeSceneComplete = true;
 
