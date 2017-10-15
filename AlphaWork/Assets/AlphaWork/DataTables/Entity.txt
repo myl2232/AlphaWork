@@ -8,8 +8,10 @@
 	20001	�����ƽ���	EnemyEngine
 	30000	Ĭ������	DefaultWeapon
 	40000	Ĭ��װ��	DefaultArmor
-	50000	�����ӵ�	PlayerBolt
-	50001	�����ӵ�	EnemyBolt
+	50000	�����ӵ�	Enemy
+	50001	�����ӵ�	HellephantPrefab
+	50002	�����ӵ�	ZomBearPrefab
+	50003	�����ӵ�	ZombunnyPrefab
 	60000	С����	Asteroid01
 	60001	С����	Asteroid02
 	60002	С����	Asteroid03
