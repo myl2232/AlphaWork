@@ -16,5 +16,6 @@
         LeftClickEvent,
         RightClickEvent,
         RefreshMainPosEvent,
+        MoveToTarget,
     }
 }

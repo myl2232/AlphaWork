@@ -85,6 +85,7 @@ namespace AlphaWork
             GameEntry.Entity.AddEntityGroup("Ethan", 1, 20, 1, 10000);
             GameEntry.Entity.AddEntityGroup("UIForm", 1, 20, 1, 10000);
             GameEntry.Entity.AddEntityGroup("NPC", 1, 20, 1, 10000);
+            GameEntry.Entity.AddEntityGroup("Enemy", 1, 20, 1, 10000);
             //GameEntry.Sound.AddSoundGroup("Music", 1);
             //GameEntry.Sound.AddSoundGroup("Sound", 1);
             //GameEntry.Sound.AddSoundGroup("UISound", 1);

@@ -79,8 +79,12 @@ namespace AlphaWork
             {                
                 RegisterStructure(ne.Entity);
             }
+            else if (ne.EntityLogicType == typeof(NPC))
+            {
+                
+            }
         }
-
+        
         protected virtual void RegisterStructure(UnityGameFramework.Runtime.Entity ent)
         {
         }

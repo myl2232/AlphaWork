@@ -33,9 +33,9 @@ namespace AlphaWork
                         UnityEngine.Random.Range(mainPos.z + 10, mainPos.x + 50));
 
                     Physics.Raycast(startPt,
-                        Vector3.down, out hitInfo, 100);
+                        Vector3.down, out hitInfo, 1000);
 
-                    GameEntry.Entity.ShowNPC(new NPCData(GameEntry.Entity.GenerateSerialId(), 50001, CampType.Enemy)
+                    GameEntry.Entity.ShowEnemy(new NPCData(GameEntry.Entity.GenerateSerialId(), 50001, CampType.Enemy)
                     {
                         Position = hitInfo.point,
                     });

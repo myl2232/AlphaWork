@@ -39,6 +39,11 @@ namespace AlphaWork
             entityComponent.ShowEntity(typeof(NPC), "NPC", data);
         }
 
+        public static void ShowEnemy(this EntityComponent entityComponent, NPCData data)
+        {
+            entityComponent.ShowEntity(typeof(Enemy), "Enemy", data);
+        }
+
         public static void ShowEthan(this EntityComponent entityComponent, EthanData data)
 		{
             entityComponent.ShowEntity(typeof(Ethan), "Ethan", data);

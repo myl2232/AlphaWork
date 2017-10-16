@@ -36,8 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4261740974471750}
   - component: {fileID: 95558749299648488}
-  - component: {fileID: 114101384372176336}
-  - component: {fileID: 143969541841803552}
+  - component: {fileID: 114246963007770476}
   m_Layer: 0
   m_Name: ZomBearPrefab
   m_TagString: Untagged
@@ -81,7 +80,7 @@ Animator:
   m_GameObject: {fileID: 1831494364151194}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d813c17b5e1fa141954a3628f9ab7fd, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -89,7 +88,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114101384372176336
+--- !u!114 &114246963007770476
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1831494364151194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64e0fb49ec61bd244ab081fc23ac97e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a8b3406eb5b9324b9f092a882912db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!137 &137012849255224790
@@ -145,20 +144,3 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5385571, y: 0.000000029802322, z: 0.00059360266}
     m_Extent: {x: 0.70241565, y: 0.76117194, z: 0.37453073}
   m_DirtyAABB: 0
---- !u!143 &143969541841803552
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1831494364151194}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.5
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.5, z: 0}

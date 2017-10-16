@@ -10,11 +10,11 @@ namespace AlphaWork
 {
     public class NPC: EntityObject
     {
-        private Vector3 lockPos;
-        private NPCData m_data = null;
-        private float m_TimeSpawn;
-        private float m_RecordTime;
-        private bool m_AIGo;
+        protected Vector3 lockPos;
+        protected NPCData m_data = null;
+        protected float m_TimeSpawn;
+        protected float m_RecordTime;
+        protected bool m_AIGo;
         // Use this for initialization
         void Start()
         {

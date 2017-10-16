@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4688331670381228}
   - component: {fileID: 95980642234763130}
-  - component: {fileID: 143141199523816970}
+  - component: {fileID: 114617903194677178}
   m_Layer: 0
   m_Name: ZombunnyPrefab
   m_TagString: Untagged
@@ -80,7 +80,7 @@ Animator:
   m_GameObject: {fileID: 1548263260688348}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: be66986effd141b4992d2d78be127139, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d813c17b5e1fa141954a3628f9ab7fd, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -88,6 +88,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114617903194677178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1548263260688348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8b3406eb5b9324b9f092a882912db8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137903977830031392
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -133,20 +144,3 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.7512775, y: 0.13553917, z: 0.0813802}
     m_Extent: {x: 0.92589253, y: 0.80246866, z: 0.53743356}
   m_DirtyAABB: 0
---- !u!143 &143141199523816970
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1548263260688348}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
