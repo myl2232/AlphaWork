@@ -22,6 +22,13 @@
             return string.Format("Assets/AlphaWork/Scenes/{0}.unity", assetName);
         }
 
+        public static string GetNavigationAsset(string assetName)
+        {
+            string[] splitNames = assetName.Split('/');
+            string[] levelNames = splitNames[splitNames.Length - 1].Split('.');
+            return string.Format("Assets/AlphaWork/Navigations/{0}/RecastNavmesh.asset", levelNames[0]);
+        }
+
         public static string GetMusicAsset(string assetName)
         {
             return string.Format("Assets/AlphaWork/Music/{0}.mp3", assetName);
