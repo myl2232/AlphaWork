@@ -7,17 +7,17 @@ namespace AlphaWork.Editor
 {
     public class AlphaDeviceModelConfigEditorWindow : EditorWindow
     {
-        private AlphaDeviceModelConfig m_Config = null;
+        private DeviceModelConfig m_Config = null;
 
         [MenuItem("AlphaWork/Device Model Config Editor")]
         public static void EditDeviceModelConfig()
         {
             const string DeviceModelConfigFullName = "Assets/AlphaWork/Configs/AlphaDeviceModelConfig.asset";
             //const string pt = "Assets/AlphaWork/Textures/fx_lazer_cyan_dff.tif";
-            OpenWindow(AssetDatabase.LoadAssetAtPath<AlphaDeviceModelConfig>(DeviceModelConfigFullName));
+            OpenWindow(AssetDatabase.LoadAssetAtPath<DeviceModelConfig>(DeviceModelConfigFullName));
         }
 
-        public static void OpenWindow(AlphaDeviceModelConfig deviceModelConfig)
+        public static void OpenWindow(DeviceModelConfig deviceModelConfig)
         {
             if (deviceModelConfig == null)
             {
@@ -40,13 +40,13 @@ namespace AlphaWork.Editor
         }
 
         private Vector2 m_DeviceModelTablePosition = Vector2.zero;
-        private FieldInfo m_DeviceNameCellField = typeof(AlphaDeviceModel).GetField("m_DeviceName", BindingFlags.NonPublic | BindingFlags.Instance);
-        private FieldInfo m_ModelNameCellField = typeof(AlphaDeviceModel).GetField("m_ModelName", BindingFlags.NonPublic | BindingFlags.Instance);
-        private FieldInfo m_QualityLevelCellField = typeof(AlphaDeviceModel).GetField("m_QualityLevel", BindingFlags.NonPublic | BindingFlags.Instance);
+        private FieldInfo m_DeviceNameCellField = typeof(DeviceModel).GetField("m_DeviceName", BindingFlags.NonPublic | BindingFlags.Instance);
+        private FieldInfo m_ModelNameCellField = typeof(DeviceModel).GetField("m_ModelName", BindingFlags.NonPublic | BindingFlags.Instance);
+        private FieldInfo m_QualityLevelCellField = typeof(DeviceModel).GetField("m_QualityLevel", BindingFlags.NonPublic | BindingFlags.Instance);
 
         private void OnDeviceModelGUI()
         {
-            AlphaDeviceModel[] deviceModels = m_Config.GetDeviceModels();
+            DeviceModel[] deviceModels = m_Config.GetDeviceModels();
 
             DrawHeader();
 
@@ -85,7 +85,7 @@ namespace AlphaWork.Editor
             EditorGUILayout.EndHorizontal();
         }
 
-        private bool DrawItem(AlphaDeviceModel row)
+        private bool DrawItem(DeviceModel row)
         {
             EditorGUILayout.BeginHorizontal();
             bool deleteMe = GUILayout.Button("-", GUILayout.Width(20f), GUILayout.Height(EditorGUIUtility.singleLineHeight));

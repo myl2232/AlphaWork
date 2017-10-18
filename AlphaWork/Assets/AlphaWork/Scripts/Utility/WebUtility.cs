@@ -6,8 +6,6 @@ namespace AlphaWork
     {
         public static string EscapeString(string stringToEscape)
         {
-            if (null == stringToEscape)
-                return null;
             return Uri.EscapeDataString(stringToEscape);
         }
 

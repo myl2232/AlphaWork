@@ -21,15 +21,15 @@ namespace AlphaWork
 
         protected void RegisterCustomEvents()
         {
-            GameEntry.Event.Subscribe(EventId.GameToLoginEvent, OnGameToLogin);
-            GameEntry.Event.Subscribe(EventId.GameEventStart, OnGameStart);
-            GameEntry.Event.Subscribe(EventId.UIOccupyEvent, OnUIOccupy);
-            GameEntry.Event.Subscribe(EventId.AIGoEvent,OnAIGo);
+            GameEntry.Event.Subscribe(GameToLoginEventArgs.EventId, OnGameToLogin);
+            GameEntry.Event.Subscribe(GameStartEventArgs.EventId, OnGameStart);
+            GameEntry.Event.Subscribe(UIOccupyEventArgs.EventId, OnUIOccupy);
+            GameEntry.Event.Subscribe(AIGoEventArgs.EventId,OnAIGo);
 
-            GameEntry.Event.Subscribe(EventId.UpClickEvent, OnUpClick);
-            GameEntry.Event.Subscribe(EventId.DownClickEvent, OnDownClick);
-            GameEntry.Event.Subscribe(EventId.LeftClickEvent, OnLeftClick);
-            GameEntry.Event.Subscribe(EventId.RightClickEvent, OnRightClick);
+            GameEntry.Event.Subscribe(UpClickEventArgs.EventId, OnUpClick);
+            GameEntry.Event.Subscribe(DownClickEventArgs.EventId, OnDownClick);
+            GameEntry.Event.Subscribe(LeftClickEventArgs.EventId, OnLeftClick);
+            GameEntry.Event.Subscribe(RightClickEventArgs.EventId, OnRightClick);
         }
         protected void InitCallbacks()
         {

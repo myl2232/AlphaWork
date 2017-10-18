@@ -39,7 +39,7 @@ namespace AlphaWork
         {
              base.Initialize();
 
-            GameEntry.Event.Subscribe(EventId.RefreshMainPosEvent, OnRefreshMainPos);
+            GameEntry.Event.Subscribe(RefreshMainPosArgs.EventId, OnRefreshMainPos);
             //Alib.Meto();
             GameEntry.Event.Fire(this, new GameStartEventArgs());
             GameEntry.UI.OpenUIForm(UIFormId.MainForm);

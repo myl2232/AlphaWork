@@ -18,7 +18,7 @@ namespace AlphaWork
         // Use this for initialization
         void Start()
         {
-            GameEntry.Event.Subscribe(EventId.AIGoEvent, OnAIGo);
+            GameEntry.Event.Subscribe(AIGoEventArgs.EventId, OnAIGo);
         }
 
         // Update is called once per frame

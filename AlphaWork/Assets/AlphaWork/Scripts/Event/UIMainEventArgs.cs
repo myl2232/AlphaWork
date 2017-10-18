@@ -8,11 +8,12 @@ namespace AlphaWork
 {
     class UIMainEventArgs : GameEventArgs
     {
+        public static readonly int EventId = typeof(UIMainEventArgs).GetHashCode();
         public override int Id
         {
             get
             {
-                return (int)EventId.MainStateEvent;
+                return EventId;
             }
         }
     }

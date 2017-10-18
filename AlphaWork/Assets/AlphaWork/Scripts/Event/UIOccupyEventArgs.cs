@@ -8,20 +8,14 @@ namespace AlphaWork
 {
     class UIOccupyEventArgs : GameEventArgs
     {
-        //private int m_entityId;
+        public static readonly int EventId = typeof(UIOccupyEventArgs).GetHashCode();
         public override int Id
         {
             get
             {
-                return (int)EventId.UIOccupyEvent;
+                return EventId;
             }
         }
-        //public int EntityId
-        //{
-        //    get
-        //    { return m_entityId; }
-        //    set
-        //    { m_entityId = value; }
-        //}
+
     }
 }

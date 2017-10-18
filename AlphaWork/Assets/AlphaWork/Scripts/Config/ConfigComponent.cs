@@ -7,7 +7,7 @@ namespace AlphaWork
     public class ConfigComponent : GameFrameworkComponent
     {
         [SerializeField]
-        private AlphaDeviceModelConfig m_DeviceModelConfig = null;
+        private DeviceModelConfig m_DeviceModelConfig = null;
 
         [SerializeField]
         private TextAsset m_BuildInfoTextAsset = null;
@@ -17,7 +17,7 @@ namespace AlphaWork
 
         private BuildInfo m_BuildInfo = null;
 
-        public AlphaDeviceModelConfig DeviceModelConfig
+        public DeviceModelConfig DeviceModelConfig
         {
             get
             {

@@ -9,11 +9,12 @@ namespace AlphaWork
 {
     public class MoveToTargetEventArgs : GameEventArgs
     {
+        public static readonly int EventId = typeof(MoveToTargetEventArgs).GetHashCode();
         public override int Id
         {
             get
             {
-                return (int)EventId.MoveToTarget;
+                return EventId;
             }
         }
         protected Vector3 m_MovePos;

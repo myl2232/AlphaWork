@@ -8,11 +8,12 @@ namespace AlphaWork
 {
     class RightClickEventArgs : GameEventArgs
     {
+        public static readonly int EventId = typeof(RightClickEventArgs).GetHashCode();
         public override int Id
         {
             get
             {
-                return (int)EventId.RightClickEvent;
+                return EventId;
             }
         }
     }

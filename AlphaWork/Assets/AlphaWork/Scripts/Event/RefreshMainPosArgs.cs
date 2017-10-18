@@ -6,11 +6,13 @@ namespace AlphaWork
 {
     public class RefreshMainPosArgs : GameEventArgs
     {
+        public static readonly int EventId = typeof(RefreshMainPosArgs).GetHashCode();
+
         public override int Id
         {
             get
             {
-                return (int)EventId.RightClickEvent;
+                return EventId;
             }
         }
         protected Transform m_HitTransform;

@@ -9,11 +9,12 @@ namespace AlphaWork
 {
     class GameToLoginEventArgs : GameEventArgs
     {
+        public static readonly int EventId = typeof(GameToLoginEventArgs).GetHashCode();
         public override int Id
         {
             get
             {
-                return (int)EventId.GameToLoginEvent;
+                return EventId;
             }
         }
 

@@ -16,7 +16,7 @@ namespace AlphaWork
         // Use this for initialization
         void Start()
         {
-            GameEntry.Event.Subscribe(EventId.MoveToTarget, OnMoveToTarget);
+            GameEntry.Event.Subscribe(MoveToTargetEventArgs.EventId, OnMoveToTarget);
         }
 
         // Update is called once per frame

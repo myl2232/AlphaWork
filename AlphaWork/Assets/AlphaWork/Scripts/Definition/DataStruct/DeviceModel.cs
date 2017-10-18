@@ -4,7 +4,7 @@ using UnityEngine;
 namespace AlphaWork
 {
     [Serializable]
-    public class AlphaDeviceModel
+    public class DeviceModel
     {
         [SerializeField]
         private string m_DeviceName = null;

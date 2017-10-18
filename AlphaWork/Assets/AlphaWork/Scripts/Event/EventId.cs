@@ -1,11 +1,12 @@
-﻿namespace AlphaWork
+﻿
+namespace AlphaWork
 {
     /// <summary>
     /// 事件类型编号。
     /// </summary>
     public enum EventId
     {
-        GameEventStart = UnityGameFramework.Runtime.EventId.GameEventStart,
+        GameEventStart = 0,
         GameToLoginEvent,
         UIOccupyEvent,
         HomeStateEvent,
