@@ -1,0 +1,6 @@
+Id	Desc	Name	TYPE	AtlasName	TexName
+INT	STRING	STRING	STRING	STRING	STRING
+#MAX_ID=1024;MAX_RECORD=1024;TableType=Hash;					
+#家具风格	家具风格描述（本列程序不读）	名称	类型	UI显示的时候使用的图集名称	UI显示的时候使用的纹理名称
+0	标准家装风格	style001	STYLE	StyleAtlas	StyleNormal_psd
+1	典雅	style002	STYLE	StyleAtlas	StyleBetter_psd

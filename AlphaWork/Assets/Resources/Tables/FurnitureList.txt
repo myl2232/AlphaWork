@@ -1,0 +1,77 @@
+Id	Desc	Name	ResPath	Style	Kind	Type	Accord2Type	Layer	InDoor	CanDrag	CanSeledInEditorMode	CanSeledInGameMode	AtlasName	TexName	Info0	Info1	Info2	Info3
+INT	STRING	STRING	STRING	INT	INT	INT	INT	STRING	INT	INT	INT	INT	STRING	STRING	STRING	STRING	STRING	STRING
+#MAX_ID=1024;MAX_RECORD=1024;TableType=Hash;																		
+#详细家具个体	家具个体描述（本列程序不读）	名称	Prefab所在的目录，如果不能读入斜杠，就改成索引，去单件里面拿对应的路径	本家具所属的风格，	"本家具所属种类,Kind=0时，该家具不会加入到给UI显示用的列表里，给UI显示用的列表的构建函数是个虚函数，项目可以根据需要重写"		决定挂什么脚本的变量	Prefab的Layer属性，决定碰撞关系的	1为室内种类，0为室外种类	"在编辑模式下是否可以被拖动,1是可以0是不可以拖动"	编辑模式下是否可以选中，1是可以选中，0是不可以选中	漫游模式下是否可以选中，1是可以选中，0是不可以选中	UI显示的时候使用的图集名称	UI显示的时候使用的纹理名称	给路和地板使用，Info0的内容为，默认的路砖或者地板块儿的ID	Info1的内容为挂接点的名字		
+0	地面材质绿草	YardGroundMat03	Furnitures/Ground/YardGroundMat03	0	3	-1	1	AnythingBearing	0	1	1	0	FurUI_TL3D	YardGroundMat03				
+1	地面材质黄草	YardGroundMat02	Furnitures/Ground/YardGroundMat02	0	3	-1	1	AnythingBearing	0	1	1	0	FurUI_TL3D	YardGroundMat02				
+2	院子路的构型	FullPath001	Furnitures/Path/FullPath001	0	0	-1	3	OutDoorFrunitureBearing	0	0	0	0	NULL	NULL	3			
+3	院子路径砖1	Ground_Brick1	Furnitures/Path/Ground_Brick1	0	4	-1	3	OutDoorFrunitureBearing	0	1		0	FurUI_TL3D	Ground_Brick1				
+4	院子路径砖2	Ground_Brick2	Furnitures/Path/Ground_Brick2	0	4	-1	3	OutDoorFrunitureBearing	0	1	1	0	FurUI_TL3D	Ground_Brick2				
+5	低级床	fb_zijiancheng_dijichuang01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijichuang01	0	6	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijichuang				
+6	低级单屏	fb_zijiancheng_dijidanping01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijidanping01	0	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijipingfeng02				
+7	低级雕塑	fb_zijiancheng_dijidiaosu02	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijidiaosu02	0	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	diaosu				
+8	低级锻造	fb_zijiancheng_dijiduanzao01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijiduanzao01	0	0	-1	8	FurnitureObstacle	0	0	1	1	FurUI_TL3D	dijidamen				
+9	低级房	fb_zijiancheng_dijifang01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijifang01	0	0	-1	8	FurnitureObstacle	0	0	1	1	FurUI_TL3D	dijifangwu				
+10	低级古董架	fb_zijiancheng_dijigudongjia01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijigudongjia01	0	6	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijigudongjia				
+11	低级花瓶	fb_zijiancheng_dijihuaping01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijihuaping01	0	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijihuaping				
+12	低级花坛	fb_zijiancheng_dijihuatan01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijihuatan01	0	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	dijihuatan				
+13	低级假山	fb_zijiancheng_dijijiashan01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijijiashan01	0	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	dijishitou				
+14	低级库房	fb_zijiancheng_dijikufang01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijikufang01	0	0	-1	8	FurnitureObstacle	0	0	1	1	FurUI_TL3D	dijikufang				
+15	低级门	fb_zijiancheng_dijimen01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijimen01	0	0	-1	13	FurnitureObstacle	0	0	1	1	FurUI_TL3D	dijidamen				
+16	低级盆景	fb_zijiancheng_dijipenjing01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijipenjing01	0	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijipenjing				
+17	低级地毯	fb_zijiancheng_dijipiditan01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijipiditan01	0	8	-1	0	InDoorDecoration	1	1	1	1	FurUI_TL3D	dijiditan				
+18	低级屏风	fb_zijiancheng_dijipingfeng01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijipingfeng01	0	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijipingfeng01				
+19	低级院墙	fb_zijiancheng_dijiqiang01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijiqiang01	0	0	-1	2	FurnitureObstacle	0	0	0	0	FurUI_TL3D	dijipinjieqiang				
+20	低级石凳	fb_zijiancheng_dijishideng01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijishideng01	0	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	dijishideng				
+21	低级室内	fb_zijiancheng_dijishinei01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijishinei01	0	0	-1	13	Wall	1	0	0	1	NULL	NULL				
+22	低级室内地板	fb_zijiancheng_dijishinei01b	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijishinei01b	0	0	-1	2	FurnitureBearing	1	0	0	0	NULL	NULL				
+23	低级室内墙	fb_zijiancheng_dijishinei03	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijishinei03	0	0	-1	13	Wall	0	0	0	0	NULL	NULL				
+24	低级石狮子	fb_zijiancheng_dijishishizi01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijishishizi01	0	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	dijishishi				
+25	低级石桌	fb_zijiancheng_dijishizhuo01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijishizhuo01	0	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	dijishizhuo				
+26	低级树	fb_zijiancheng_dijishu01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijishu01	0	2	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	dijishu				
+27	低级书柜	fb_zijiancheng_dijishugui01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijishugui01	0	6	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijishugui				
+28	低级香炉	fb_zijiancheng_dijixianglu01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijixianglu01	0	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijixianglu				
+29	低级单椅子	fb_zijiancheng_dijiyidanyi01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijiyidanyi01	0	7	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijizuoyi				
+30	低级衣柜	fb_zijiancheng_dijiyigui01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijiyigui01	0	6	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijiyigui				
+31	低级椅子	fb_zijiancheng_dijiyizi01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijiyizi01	0	7	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijishafa				
+32	低级圆桌	fb_zijiancheng_dijiyuanzhuo01	Furnitures/TL3D/zijiancheng_diji/fb_zijiancheng_dijiyuanzhuo01	0	7	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	dijizhuozi				
+33	高级床	fb_zijiancheng_gaojichuang01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojichuang01	1	6	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojichuang				
+34	高级床	fb_zijiancheng_gaojichuang02	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojichuang02	1	6	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojichuang				
+35	高级八扇屏	fb_zijiancheng_gaojidanping01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojidanping01	1	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	bashanpingfeng				
+36	高级单椅	fb_zijiancheng_gaojidanyi01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojidanyi01	1	7	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojiyizi				
+37	高级路	fb_zijiancheng_gaojidaolu01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojidaolu01	1	0	-1	13	OutDoorFrunitureBearing	0	0	1	1	NULL	NULL				
+38	高级锻造	fb_zijiancheng_gaojiduanzao01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojiduanzao01	1	0	-1	8	FurnitureObstacle	0	0	1	1	FurUI_TL3D	gaojijianzaowu				
+39	高级方桌	fb_zijiancheng_gaojifangzhuo01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojifangzhuo01	1	7	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojifangzhuo				
+40	高级古董架	fb_zijiancheng_gaojigudongjia01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojigudongjia01	1	6	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojigudongjia				
+41	高级花瓶	fb_zijiancheng_gaojihuaping01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojihuaping01	1	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojihuaping				
+42	高级花坛01	fb_zijiancheng_gaojihuatan01da	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojihuatan01da	1	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	gaojihuatan04				
+43	高级花坛单	fb_zijiancheng_gaojihuatan01dan	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojihuatan01dan	1	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	gaojihuatan03				
+44	高级花坛转弯	fb_zijiancheng_gaojihuatan01wan	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojihuatan01wan	1	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	gaojihuatan02				
+45	高级花坛直	fb_zijiancheng_gaojihuatan01zhi	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojihuatan01zhi	1	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	gaojihuatan01				
+46	高级室内	fb_zijiancheng_gaojiishinei01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojiishinei01	1	0	-1	13	Wall	1	1	1	1	NULL	NULL				
+47	高级室内地板	fb_zijiancheng_gaojiishinei01b	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojiishinei01b	1	0	-1	2	FurnitureBearing	1	1	1	1	NULL	NULL				
+48	高级室内墙	fb_zijiancheng_gaojiishinei03	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojiishinei03	1	0	-1	13	Wall	1	1	1	1	NULL	NULL				
+49	高级房子	fb_zijiancheng_gaojijianzhu01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojijianzhu01	1	0	-1	8	FurnitureObstacle	0	0	1	1	FurUI_TL3D	gaojifangwu				
+50	高级门	fb_zijiancheng_gaojijianzhu02	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojijianzhu02	1	0	-1	13	FurnitureObstacle	0	0	0	0	FurUI_TL3D	gaojidamen				
+51	高级假山	fb_zijiancheng_gaojijiashan03	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojijiashan03	1	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	gaojijiashan				
+52	高级库房	fb_zijiancheng_gaojikufang01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojikufang01	1	0	-1	8	FurnitureObstacle	0	1	1	1	FurUI_TL3D	gaojikufang				
+53	高级盆景1	fb_zijiancheng_gaojipenjing01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojipenjing01	1	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojipenjing				
+54	高级盆景2	fb_zijiancheng_gaojipenjing02	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojipenjing02	1	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojipenjing01				
+55	高级屏风	fb_zijiancheng_gaojipingfeng01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojipingfeng01	1	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojipingfeng				
+56	高级石凳	fb_zijiancheng_gaojishideng01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojishideng01	1	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	shideng				
+57	高级石狮子	fb_zijiancheng_gaojishishizi01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojishishizi01	1	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	gaojishizi				
+58	高级石桌	fb_zijiancheng_gaojishizhuo01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojishizhuo01	1	1	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	shizhuo				
+59	高级树	fb_zijiancheng_gaojishu01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojishu01	1	2	-1	0	FurnitureObstacle	0	1	1	1	FurUI_TL3D	gaojishu				
+60	高级书柜	fb_zijiancheng_gaojishugui01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojishugui01	1	7	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojishujia				
+61	高级香炉	fb_zijiancheng_gaojixianglu01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojixianglu01	1	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	xianglu				
+62	高级衣柜	fb_zijiancheng_gaojiyigui01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojiyigui01	1	6	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojiguizi				
+63	高级椅子1	fb_zijiancheng_gaojiyizi01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojiyizi01	1	7	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojishafa				
+64	高级椅子2	fb_zijiancheng_gaojiyizi02	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_gaojiyizi02	1	7	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	gaojishafa				
+65	通用灯台	fb_zijiancheng_tongyongdengtai01	Furnitures/TL3D/zijiancheng_tongyong/fb_zijiancheng_tongyongdengtai01	0	10	-1	0	FurnitureObstacle	2	1	1	1	FurUI_TL3D	tongyongdengtai				
+66	通用字画1	fb_zijiancheng_tongyongzihua01	Furnitures/TL3D/zijiancheng_tongyong/fb_zijiancheng_tongyongzihua01	0	9	-1	4	InDoorDecoration	1	1	1	1	FurUI_TL3D	dijishua				
+67	通用字画2	fb_zijiancheng_tongyongzihua02	Furnitures/TL3D/zijiancheng_tongyong/fb_zijiancheng_tongyongzihua02	0	9	-1	4	InDoorDecoration	1	1	1	1	FurUI_TL3D	dijishua				
+68	通用挂件	fb_zijiancheng_tongyongzihua03	Furnitures/TL3D/zijiancheng_tongyong/fb_zijiancheng_tongyongzihua03	0	9	-1	4	InDoorDecoration	1	1	1	1	FurUI_TL3D	guajian				
+69	高级院子	gaojiYard	Furnitures/TL3D/zijiancheng_gaoji/gaojiYard	0	5	-1	2	Wall	0	1	1	0	FurUI_TL3D	pinjieqiang	82			
+70	院子路构型2	FullPath002	Furnitures/Path/FullPath002	0	0	-1	3	OutDoorFrunitureBearing	0	0	0	0	NULL	NULL	3			
+71	低级院子	dijiyuanqiangdijiyuanqiang	Furnitures/TL3D/zijiancheng_diji/dijiyuanqiang	0	5	-1	2	Wall	0	1	1	0	FurUI_TL3D	dijipinjieqiang				
+72	窗帘	fb_zijiancheng_dijichuanglian01	Furnitures/TL3D/zijiancheng_gaoji/fb_zijiancheng_dijichuanglian01	0	9	-1	7	InDoorDecoration	1	1	1	0	FurUI_TL3D	dijishua		SocketName		

@@ -1,0 +1,11 @@
+Id	Desc	Name	Accord2Type	Layer	INDEX	PositionX	PositionY	PositionZ	Rotation	Info0	Info1	Info2	Info3
+INT	STRING	STRING	STRING	STRING	INT	INT	INT	INT	INT	STRING	STRING	STRING	STRING
+#MAX_ID=1024;MAX_RECORD=1024;TableType=Hash;													
+#场景物件ID	场景物件描述（本列程序不读）	名称	决定挂什么脚本的变量	所属的物理层	场景中的序号	坐标X *100	坐标Y *100	坐标Z *100	旋转	场景的名字，单独成项的原因是，场景名字和Prefab名字可以不同，可以多个Prefab指向同一个场景	摆放文件的名字，存在一个Prefab被多次摆放为房子的情况，按名字去索引摆放文件是不可取的		
+-1	室内外		16										
+-1	相机运动范围限制，旋转里面填的是距离		14			0	0	0		50			
+49	房子	House001	8	FurnitureObstacle	0	400	50	100	90	Home_TL3D_InDoor001	House001		
+52	房子	House002	8	FurnitureObstacle	1	2000	50	-1500	0	Home_TL3D_InDoor001	House002		
+0	院子地面	YardGroundMat03	10	AnythingBearing	-1	-810	0	-210	0	0			
+70	院子路径	FullPath001	11	OutDoorFrunitureBearing	-1	826	216	1193	0	3			
+69	院墙基点	Wall01	12	Wall	-1	-200	0	450	90	69			

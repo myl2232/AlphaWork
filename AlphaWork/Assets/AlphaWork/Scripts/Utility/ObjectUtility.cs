@@ -24,7 +24,11 @@ namespace AlphaWork
             string str = "EthanAgent";
             return ObjectUtility.GetFellow(str);
         }
-
+        public static UnityEngine.Object GetMainPlayer()
+        {
+            string str = "Ethan";
+            return ObjectUtility.GetFellow(str);
+        }
         public static UnityEngine.Object GetTargetAgent()
         {
             string str = "TargetAgent";

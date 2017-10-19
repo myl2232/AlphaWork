@@ -1,0 +1,6 @@
+Id	Desc	Name	Respath
+INT	STRING	STRING	STRING
+#MAX_ID=1024;MAX_RECORD=1024;TableType=Hash;			
+#全部需要加载的场景		场景名	表的路径
+0	室外	SceneInfoHome_TL3D.txt	Tables/Scene/SceneInfoHome_TL3D.txt
+1	室内	SceneInfoHome_TL3D_InDoor001.txt	Tables/Scene/SceneInfoHome_TL3D_InDoor001.txt

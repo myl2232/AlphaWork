@@ -1,0 +1,15 @@
+Id	Desc	Name	TYPE	AtlasName	TexName
+INT	STRING	STRING	STRING	STRING	STRING
+#MAX_ID=1024;MAX_RECORD=1024;TableType=Hash;					
+#家具风格	家具风格描述（本列程序不读）	名称	类型	UI显示的时候使用的图集名称	UI显示的时候使用的纹理名称
+0	不在UI上显示的家具	DontShowOnUI	KIND		
+1	室外家具	OutDoorFurniture	KIND	StyleAtlas	OutDoorFurniture
+2	室外植物	Plant	KIND	StyleAtlas	Plant
+3	院子地面	YardGround	KIND	StyleAtlas	YardGround
+4	院子路径	YardPath	KIND	StyleAtlas	YardPath
+5	院墙	YardWall	KIND	StyleAtlas	YardWall
+6	床和柜子	cabinet_bed	KIND	StyleAtlas	kind01_psd
+7	桌子椅子	table_couch	KIND	StyleAtlas	kind02_psd
+8	地板	floor	KIND	StyleAtlas	kind03_psd
+9	墙上装饰，窗帘，画框等	walluse	KIND	StyleAtlas	kind04_psd
+10	没有归类的都在这	other	KIND	StyleAtlas	kind05_psd
