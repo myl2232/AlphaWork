@@ -600,8 +600,8 @@ public class RecastNavigationEditorWindow : EditorWindow
 	
 	bool UpdateNavDataInDatabase()
 	{
-        UnityEngine.Object assert = Resources.Load(resourceFolder + "RecastNavmesh.asset");
-        RecastNavigationAsset navDataAsset = assert as RecastNavigationAsset;
+        UnityEngine.Object asset = Resources.Load(resourceFolder + "RecastNavmesh");
+        RecastNavigationAsset navDataAsset = asset as RecastNavigationAsset;
 		if (navDataAsset == null)
 		{
             if (m_navMeshRepresentation != null)
@@ -642,7 +642,7 @@ public class RecastNavigationEditorWindow : EditorWindow
 			}
 			levelName = sceneName + "/";
 		}
-		resourceFolder = "Assets/Resources/Navigations/" + levelName;
+		resourceFolder = "Navigations/" + levelName;
 	}
 	
 	void Init()
