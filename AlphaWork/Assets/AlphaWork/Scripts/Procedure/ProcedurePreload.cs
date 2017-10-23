@@ -2,6 +2,7 @@
 using GameFramework.Event;
 using GameFramework.Resource;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
@@ -91,6 +92,8 @@ namespace AlphaWork
             //GameEntry.Sound.AddSoundGroup("UISound", 1);
             // Preload fonts
             LoadFont("MainFont");
+
+            Download();
         }
 
         private void LoadDataTable(string dataTableName)
@@ -167,5 +170,15 @@ namespace AlphaWork
 
             Log.Error("Can not load dictionary '{0}' from '{1}' with error message '{2}'.", ne.DictionaryName, ne.DictionaryAssetName, ne.ErrorMessage);
         }
+
+        private void Download()
+        {
+            PreDownloadHelper downloader = Object.FindObjectOfType<PreDownloadHelper>();
+            if(downloader)
+            {
+                downloader.BeginDownload();
+            }
+        }
+
     }
 }
