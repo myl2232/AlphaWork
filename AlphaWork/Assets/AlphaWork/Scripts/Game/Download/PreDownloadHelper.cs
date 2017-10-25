@@ -25,7 +25,7 @@ namespace AlphaWork
 
         public void Start()
         {
-            DownloadTable = /*Application.dataPath + */"Assets/DOWNLOAD.txt";
+            DownloadTable = "Assets/AlphaWork/DataTables/DOWNLOAD.txt";
         }
 
         public void BeginDownload()

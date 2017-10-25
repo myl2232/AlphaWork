@@ -353,11 +353,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11447244, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11420954, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
       propertyPath: m_DownloadAgentHelperTypeName
       value: UnityGameFramework.Runtime.DefaultDownloadAgentHelper
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499388, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
+      propertyPath: m_EditorResourceMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497722, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
+      propertyPath: m_ResourceMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499388, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
+      propertyPath: m_JsonHelperTypeName
+      value: AlphaWork.LitJsonHelper
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497722, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
+      propertyPath: m_UpdatePrefixUri
+      value: Alpha
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
@@ -422,7 +438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae1bc34bbf7698408af31088c6a1814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DownloadRoot: http://localhost:81/WWW/ARAlpha/Assets/UnityARKitPlugin/Examples/Common/Textures/PlayerDiffuse.png
 --- !u!1 &1088672571
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,8 +41,8 @@ namespace AlphaWork
                 return;
             }
 
-            m_BuildInfo = new BuildInfo();//Utility.Json.ToObject<BuildInfo>(m_BuildInfoTextAsset.text);
-            m_BuildInfo.CheckVersionUrl = "http://gameframework.cn/AlphaWork/version.txt";
+            m_BuildInfo = Utility.Json.ToObject<BuildInfo>(m_BuildInfoTextAsset.text);
+            m_BuildInfo.CheckVersionUrl = "http://localhost:81/WWW/version.txt";
             m_BuildInfo.GameVersion = "0.1.0";
             m_BuildInfo.InternalVersion = 0;
             if (m_BuildInfo == null)
