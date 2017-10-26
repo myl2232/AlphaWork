@@ -37,6 +37,7 @@ namespace AlphaWork
             //                 GameEntry.Download.AddDownload(FileUtility.GetStreamingDest(file),file);
             //                 //GameEntry.Download.AddDownload("F:/Unity/Private/AlphaWork/AlphaWork/Assets/DownloadTemp/1.png", DownloadRoot);
             //             }
+            
         }
 
         public void OnLoadSuccessCallback(string assetName, object asset, float duration, object userData)
