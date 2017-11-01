@@ -44,8 +44,6 @@ namespace AlphaWork
         {
             base.OnEnter(procedureOwner);
 
-            GameEntry.UI.CloseUIForm(m_Games[0].MenuID);
-
             m_GotoMenu = false;
             GameMode gameMode = (GameMode)procedureOwner.GetData<VarInt>(Constant.ProcedureData.GameMode).Value;
             m_CurrentGame = m_Games[gameMode];

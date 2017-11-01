@@ -6,8 +6,8 @@ namespace AlphaWork
 {
     public class MenuForm : UGuiForm
     {
-        [SerializeField]
-        private GameObject m_QuitButton = null;
+//         [SerializeField]
+//         private GameObject m_QuitButton = null;
 
         private ProcedureMenu m_ProcedureMenu = null;
 
@@ -48,7 +48,7 @@ namespace AlphaWork
                 return;
             }
 
-            m_QuitButton.SetActive(Application.platform != RuntimePlatform.IPhonePlayer);
+            //m_QuitButton.SetActive(Application.platform != RuntimePlatform.IPhonePlayer);
         }
 
         protected internal override void OnClose(object userData)
