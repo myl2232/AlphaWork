@@ -258,9 +258,13 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11494652, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
+      propertyPath: m_EntityGroups.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11405216, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
       propertyPath: m_AvailableProcedureTypeNames.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 433714, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
       propertyPath: m_LocalPosition.x
@@ -361,11 +365,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11499388, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
       propertyPath: m_EditorResourceMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11497722, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
       propertyPath: m_ResourceMode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11499388, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
       propertyPath: m_JsonHelperTypeName
@@ -374,6 +378,10 @@ Prefab:
     - target: {fileID: 11497722, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
       propertyPath: m_UpdatePrefixUri
       value: Alpha
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405216, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[7]
+      value: AlphaWork.ProcedureUpdateResource
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adb3eb1c35fcff14f89fba7b05c9d71c, type: 2}
@@ -556,3 +564,5 @@ MonoBehaviour:
     type: 3}
   m_DefaultDictionaryTextAsset: {fileID: 4900000, guid: c7479e9fdcb08b044899f9a5c99617d4,
     type: 3}
+  m_UpdateResourceFormTemplate: {fileID: 11487720, guid: 0184a4883adbcd64cbd1376733ea6e2d,
+    type: 2}

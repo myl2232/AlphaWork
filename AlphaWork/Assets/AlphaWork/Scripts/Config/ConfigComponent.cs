@@ -15,6 +15,9 @@ namespace AlphaWork
         [SerializeField]
         private TextAsset m_DefaultDictionaryTextAsset = null;
 
+        [SerializeField]
+        private UpdateResourceForm m_UpdateResourceFormTemplate = null;
+
         private BuildInfo m_BuildInfo = null;
 
         public DeviceModelConfig DeviceModelConfig
@@ -30,6 +33,14 @@ namespace AlphaWork
             get
             {
                 return m_BuildInfo;
+            }
+        }
+
+        public UpdateResourceForm UpdateResourceFormTemplate
+        {
+            get
+            {
+                return m_UpdateResourceFormTemplate;
             }
         }
 

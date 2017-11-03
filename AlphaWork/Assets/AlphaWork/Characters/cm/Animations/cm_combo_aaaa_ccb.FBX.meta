@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 36f358d4d0b28d84d911eef51c6b0464
-timeCreated: 1509069422
+guid: b0009ee8c6f75fd4ba905808e3eb3b0b
+timeCreated: 1509679913
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -80,103 +80,20 @@ ModelImporter:
     100144: bone_root01
     100146: bone_root02
     100148: camera_0001
-    100150: cheek_L
-    100152: cheek_R
-    100154: //RootNode
-    100156: cm_c_003
-    100158: cm_e_005_l
-    100160: cm_e_005_r
-    100162: cm_f_001
-    100164: cm_h_001
-    100166: Dummy001
-    100168: eye_down_L
-    100170: eye_down_R
-    100172: eye_left_bone
-    100174: eye_right_bone
-    100176: eye_up_L
-    100178: eye_up_R
-    100180: eyebrow_in_L
-    100182: eyebrow_in_R
-    100184: eyebrow_med_L
-    100186: eyebrow_med_R
-    100188: eyebrow_out_L
-    100190: eyebrow_out_R
-    100192: eyes_look_at
-    100194: f_ee_o_000
-    100196: face_base
-    100198: face_L
-    100200: face_R
-    100202: jaw
-    100204: Lefteyes_look_at
-    100206: mouth_down_L
-    100208: mouth_down_M
-    100210: mouth_down_R
-    100212: mouth_up_L
-    100214: mouth_up_M
-    100216: mouth_up_R
-    100218: mouthcorner_L
-    100220: mouthcorner_R
-    100222: nose_base
-    100224: nose_left
-    100226: nose_right
-    100228: null_Rope1_connect
-    100230: null_Rope2_connect
-    100232: null_Rope3_connect
-    100234: null_Rope4_connect
-    100236: Particle View 001
-    100238: Particle View 001 1
-    100240: Righteye_look_at
-    100242: Rope1 Seg01
-    100244: Rope1 Seg02
-    100246: Rope1 Seg03
-    100248: Rope1 Seg04
-    100250: Rope1 Seg05
-    100252: Rope1 Seg06
-    100254: Rope1 Seg07
-    100256: Rope1 Seg08
-    100258: Rope1 Seg09
-    100260: Rope1 Seg10
-    100262: Rope1 Seg11
-    100264: Rope1 Seg12
-    100266: Rope1 Seg13
-    100268: Rope1 Seg14
-    100270: Rope1 Seg15
-    100272: Rope2 Seg01
-    100274: Rope2 Seg02
-    100276: Rope2 Seg03
-    100278: Rope2 Seg04
-    100280: Rope2 Seg05
-    100282: Rope2 Seg06
-    100284: Rope2 Seg07
-    100286: Rope2 Seg08
-    100288: Rope2 Seg09
-    100290: Rope2 Seg10
-    100292: Rope2 Seg11
-    100294: Rope2 Seg12
-    100296: Rope2 Seg13
-    100298: Rope2 Seg14
-    100300: Rope2 Seg15
-    100302: Rope3 Seg01
-    100304: Rope3 Seg02
-    100306: Rope3 Seg03
-    100308: Rope3 Seg04
-    100310: Rope3 Seg05
-    100312: Rope3 Seg06
-    100314: Rope3 Seg07
-    100316: Rope3 Seg08
-    100318: Rope3 Seg09
-    100320: Rope3 Seg10
-    100322: Rope3 Seg11
-    100324: Rope3 Seg12
-    100326: Rope3 Seg13
-    100328: Rope3 Seg14
-    100330: Rope3 Seg15
-    100332: Rope4 Seg01
-    100334: Rope4 Seg02
-    100336: Rope4 Seg03
-    100338: Rope4 Seg04
-    100340: weapon_bone_L
-    100342: weapon_bone_R
+    100150: cm_c_005
+    100152: //RootNode
+    100154: cm_e_005_l
+    100156: cm_e_005_r
+    100158: cm_f_005
+    100160: cm_h_005
+    100162: cm_n_005
+    100164: Locator_Locomotion
+    100166: Particle View 001
+    100168: Particle View 001 1
+    100170: skeleton_character
+    100172: throwing_bone_beAtk
+    100174: weapon_bone_L
+    100176: weapon_bone_R
     400000: _Bip01 L Toe0Nub
     400002: _Bip01 R Toe0Nub
     400004: Bip01
@@ -252,120 +169,38 @@ ModelImporter:
     400144: bone_root01
     400146: bone_root02
     400148: camera_0001
-    400150: cheek_L
-    400152: cheek_R
-    400154: //RootNode
-    400156: cm_c_003
-    400158: cm_e_005_l
-    400160: cm_e_005_r
-    400162: cm_f_001
-    400164: cm_h_001
-    400166: Dummy001
-    400168: eye_down_L
-    400170: eye_down_R
-    400172: eye_left_bone
-    400174: eye_right_bone
-    400176: eye_up_L
-    400178: eye_up_R
-    400180: eyebrow_in_L
-    400182: eyebrow_in_R
-    400184: eyebrow_med_L
-    400186: eyebrow_med_R
-    400188: eyebrow_out_L
-    400190: eyebrow_out_R
-    400192: eyes_look_at
-    400194: f_ee_o_000
-    400196: face_base
-    400198: face_L
-    400200: face_R
-    400202: jaw
-    400204: Lefteyes_look_at
-    400206: mouth_down_L
-    400208: mouth_down_M
-    400210: mouth_down_R
-    400212: mouth_up_L
-    400214: mouth_up_M
-    400216: mouth_up_R
-    400218: mouthcorner_L
-    400220: mouthcorner_R
-    400222: nose_base
-    400224: nose_left
-    400226: nose_right
-    400228: null_Rope1_connect
-    400230: null_Rope2_connect
-    400232: null_Rope3_connect
-    400234: null_Rope4_connect
-    400236: Particle View 001
-    400238: Particle View 001 1
-    400240: Righteye_look_at
-    400242: Rope1 Seg01
-    400244: Rope1 Seg02
-    400246: Rope1 Seg03
-    400248: Rope1 Seg04
-    400250: Rope1 Seg05
-    400252: Rope1 Seg06
-    400254: Rope1 Seg07
-    400256: Rope1 Seg08
-    400258: Rope1 Seg09
-    400260: Rope1 Seg10
-    400262: Rope1 Seg11
-    400264: Rope1 Seg12
-    400266: Rope1 Seg13
-    400268: Rope1 Seg14
-    400270: Rope1 Seg15
-    400272: Rope2 Seg01
-    400274: Rope2 Seg02
-    400276: Rope2 Seg03
-    400278: Rope2 Seg04
-    400280: Rope2 Seg05
-    400282: Rope2 Seg06
-    400284: Rope2 Seg07
-    400286: Rope2 Seg08
-    400288: Rope2 Seg09
-    400290: Rope2 Seg10
-    400292: Rope2 Seg11
-    400294: Rope2 Seg12
-    400296: Rope2 Seg13
-    400298: Rope2 Seg14
-    400300: Rope2 Seg15
-    400302: Rope3 Seg01
-    400304: Rope3 Seg02
-    400306: Rope3 Seg03
-    400308: Rope3 Seg04
-    400310: Rope3 Seg05
-    400312: Rope3 Seg06
-    400314: Rope3 Seg07
-    400316: Rope3 Seg08
-    400318: Rope3 Seg09
-    400320: Rope3 Seg10
-    400322: Rope3 Seg11
-    400324: Rope3 Seg12
-    400326: Rope3 Seg13
-    400328: Rope3 Seg14
-    400330: Rope3 Seg15
-    400332: Rope4 Seg01
-    400334: Rope4 Seg02
-    400336: Rope4 Seg03
-    400338: Rope4 Seg04
-    400340: weapon_bone_L
-    400342: weapon_bone_R
+    400150: cm_c_005
+    400152: //RootNode
+    400154: cm_e_005_l
+    400156: cm_e_005_r
+    400158: cm_f_005
+    400160: cm_h_005
+    400162: cm_n_005
+    400164: Locator_Locomotion
+    400166: Particle View 001
+    400168: Particle View 001 1
+    400170: skeleton_character
+    400172: throwing_bone_beAtk
+    400174: weapon_bone_L
+    400176: weapon_bone_R
     2300000: cm_e_005_l
     2300002: cm_e_005_r
     3300000: cm_e_005_l
     3300002: cm_e_005_r
-    4300000: cm_c_003
-    4300002: cm_f_001
-    4300004: cm_e_005_r
-    4300006: cm_e_005_l
-    4300008: cm_h_001
-    7400000: cm
-    7400002: Take 001
-    7400004: breath
+    4300000: skeleton_character
+    4300002: cm_h_005
+    4300004: cm_f_005
+    4300006: cm_c_005
+    4300008: cm_e_005_r
+    4300010: cm_e_005_l
+    4300012: cm_n_005
+    7400000: Take 001
     9500000: //RootNode
-    11100000: //RootNode
-    13700000: cm_c_003
-    13700002: cm_f_001
-    13700004: cm_h_001
+    13700000: cm_c_005
+    13700002: cm_f_005
+    13700004: cm_h_005
+    13700006: cm_n_005
+    13700008: skeleton_character
   materials:
     importMaterials: 1
     materialName: 0
@@ -382,7 +217,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -411,7 +246,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -426,8 +261,8 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
-    hasTranslationDoF: 1
-    hasExtraRoot: 1
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2

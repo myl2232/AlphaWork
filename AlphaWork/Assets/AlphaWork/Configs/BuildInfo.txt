@@ -1,1 +1,9 @@
-{"GameVersion":"0.1.0","InternalVersion":0,"CheckVersionUrl":"http://gameframework.cn/AlphaWork/version.txt"}
+{
+  "GameVersion": "1.0.2",
+  "InternalApplicationVersion": 1,
+  "CheckVersionUrl": "http://localhost:81/WWW/version.txt",
+  "StandaloneAppUrl": "http://localhost:81/WWW",
+  "IosAppUrl": "http://localhost:81/WWW",
+  "AndroidAppUrl": "http://localhost:81/WWW",
+  "END_OF_JSON": ""
+}

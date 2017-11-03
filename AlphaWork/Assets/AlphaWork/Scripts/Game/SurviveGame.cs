@@ -88,7 +88,7 @@ namespace AlphaWork
                 //RaycastHit hitInfo;
                 //Physics.Raycast(Camera.main.transform.position, MainEthan.transform.position - Camera.main.transform.position - offset, out hitInfo, 100);
 
-                Camera.main.transform.LookAt(MainEthan.transform.position + new Vector3(0,1,0)/*hitInfo.point*/);
+                Camera.main.transform.LookAt(MainEthan.transform.position/* + new Vector3(0,1,0)hitInfo.point*/);
 
                 //string str = string.Format("{0:f2},{1:f2},{2:f2}", hitInfo.point.x, hitInfo.point.y, hitInfo.point.z);
                 //DebugUtility.DebugText(str);
