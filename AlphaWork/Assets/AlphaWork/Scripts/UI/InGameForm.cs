@@ -19,22 +19,6 @@ namespace AlphaWork
         {
             GameEntry.Event.Fire(this, new AIGoEventArgs());
         }
-        public void OnUpClick()
-        {
-            GameEntry.Event.Fire(this, new UpClickEventArgs());
-        }
-        public void OnDownClick()
-        {
-            GameEntry.Event.Fire(this, new DownClickEventArgs());
-        }
-        public void OnLeftClick()
-        {
-            GameEntry.Event.Fire(this, new LeftClickEventArgs());
-        }
-        public void OnRightClick()
-        {
-            GameEntry.Event.Fire(this, new RightClickEventArgs());
-        }
-
+       
     }
 }
