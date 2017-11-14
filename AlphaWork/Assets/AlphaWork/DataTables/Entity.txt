@@ -19,6 +19,7 @@
 	70001	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§	EnemyExplosion
 	70002	Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§	AsteroidExplosion
 	80000	ï¿½ï¿½ï¿½ï¿½	Ethan
+	80001	ï¿½ï¿½ï¿½ï¿½	cmPrefab
 	90000	Îï¼þ	CubePrefab
 	90001	Cube	CubePrefab
 	90004	Block	StructureBlock
