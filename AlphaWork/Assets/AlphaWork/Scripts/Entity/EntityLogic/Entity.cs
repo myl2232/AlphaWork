@@ -4,7 +4,7 @@ using UnityGameFramework.Runtime;
 
 namespace AlphaWork
 {
-    public abstract class Entity : EntityLogic
+    public abstract class CustomEntity : EntityLogic
     {
         [SerializeField]
         private EntityData m_EntityData = null;
